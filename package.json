@@ -1,0 +1,19 @@
+{
+  "name": "budget-app-front",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmereQ/budget-app-front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmereQ/budget-app-front/issues"
+  },
+  "homepage": "https://github.com/AmereQ/budget-app-front#readme",
+  "description": ""
+}
