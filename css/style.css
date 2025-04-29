@@ -1,10 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 40px;
-    text-align: center;
+select option {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-h1 {
-    color: #333;
+/* Dodatkowe style */
+.bg-darkglass {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.backdrop-blur-md {
+  backdrop-filter: blur(10px);
+}
+.text-sm {
+  font-size: 0.875rem;
 }

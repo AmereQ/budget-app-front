@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Frontend App</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Welcome to Our Simple Frontend App</h1>
-    <p>This is a simple static webpage for demonstration.</p>
-    <script src="js/script.js"></script>
-</body>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoring Budżetu</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen p-6 font-sans"
+  >
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-6 text-center">
+        💸 Monitoring Budżetu 💸
+      </h1>
+
+      <!-- Wybór kategorii -->
+      <div class="mb-4">
+        <select
+          id="category-select"
+          class="bg-darkglass backdrop-blur-md text-white p-3 rounded border border-white/20 w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+        >
+          <!-- Opcje generowane dynamicznie -->
+        </select>
+      </div>
+
+      <!-- Formularz -->
+      <div
+        class="backdrop-blur-md bg-darkglass border border-white/10 rounded-2xl shadow-xl p-6 mb-8"
+      >
+        <h2 class="text-xl font-semibold mb-3">Dodaj wydatek</h2>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input
+            id="day"
+            type="number"
+            min="1"
+            max="31"
+            placeholder="Dzień (1–31)"
+            class="p-2 bg-white/10 text-white border border-white/20 rounded w-full sm:w-1/3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <input
+            id="amount"
+            type="number"
+            placeholder="Kwota (zł)"
+            class="p-2 bg-white/10 text-white border border-white/20 rounded w-full sm:w-1/3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <button
+            onclick="addExpense()"
+            class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full sm:w-1/3 transition"
+          >
+            Dodaj
+          </button>
+        </div>
+      </div>
+
+      <!-- Siatka z dniami -->
+      <div
+        id="day-grid"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
+      ></div>
+    </div>
+  </body>
 </html>
